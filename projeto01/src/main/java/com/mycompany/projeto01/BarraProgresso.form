@@ -23,15 +23,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="tfCpu" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="tfDisco" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="28" max="32767" attributes="0"/>
-              <Component id="tfMemoria" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -42,9 +33,66 @@
               <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="tfCpu" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblcpumaxima" pref="65" max="32767" attributes="0"/>
+                          <Component id="lblcpumedia" max="32767" attributes="0"/>
+                          <Component id="lblcpuminimo" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblresultado" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblresultado1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblresultado2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="tfDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButton1" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lbldiscomedia" max="32767" attributes="0"/>
+                                  <Component id="lbldiscominimo" max="32767" attributes="0"/>
+                                  <Component id="lbldiscomaxima" pref="65" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lbldisco1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbldisco2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbldisco3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="tfMemoria" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblmemoriaminimo" max="32767" attributes="0"/>
+                          <Component id="lblmemoriamedia" max="32767" attributes="0"/>
+                          <Component id="lblmemoriamaxima" pref="65" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblmemor1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblmemor2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblmemor3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -63,9 +111,58 @@
                   <Component id="tfDisco" min="-2" max="-2" attributes="0"/>
                   <Component id="tfCpu" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblmemoriamaxima" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblmemor1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblmemoriamedia" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lblmemor2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblmemoriaminimo" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lblmemor3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="lbldiscomaxima" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbldiscomedia" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lbldisco2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbldiscominimo" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lbldisco3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblresultado2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblcpumaxima" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblresultado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lbldisco1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblcpumedia" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lblresultado1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblcpuminimo" min="-2" pref="24" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="342" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="199" max="32767" attributes="0"/>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -99,6 +196,96 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbldiscomedia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xe9;dia :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbldiscominimo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xed;nimo :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbldiscomaxima">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Maxima :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmemoriaminimo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xed;nimo :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmemoriamedia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xe9;dia :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmemoriamaxima">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Maxima :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblcpumaxima">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Maxima :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblcpumedia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xe9;dia :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblcpuminimo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xed;nimo :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblresultado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblresultado1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblresultado2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbldisco1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbldisco2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbldisco3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmemor1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmemor2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmemor3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

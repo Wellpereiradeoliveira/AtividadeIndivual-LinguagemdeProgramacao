@@ -5,6 +5,7 @@
  */
 package com.mycompany.projeto01;
 
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -13,9 +14,10 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class BarraProgresso extends javax.swing.JFrame {
 
-    /**
-     * Creates new form BarraProgresso
-     */
+    Integer maximo = 0;
+    Integer minimo = 0;
+    Integer media = maximo + minimo / 2;
+
     public BarraProgresso() {
         initComponents();
     }
@@ -36,6 +38,24 @@ public class BarraProgresso extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        lbldiscomedia = new javax.swing.JLabel();
+        lbldiscominimo = new javax.swing.JLabel();
+        lbldiscomaxima = new javax.swing.JLabel();
+        lblmemoriaminimo = new javax.swing.JLabel();
+        lblmemoriamedia = new javax.swing.JLabel();
+        lblmemoriamaxima = new javax.swing.JLabel();
+        lblcpumaxima = new javax.swing.JLabel();
+        lblcpumedia = new javax.swing.JLabel();
+        lblcpuminimo = new javax.swing.JLabel();
+        lblresultado = new javax.swing.JLabel();
+        lblresultado1 = new javax.swing.JLabel();
+        lblresultado2 = new javax.swing.JLabel();
+        lbldisco1 = new javax.swing.JLabel();
+        lbldisco2 = new javax.swing.JLabel();
+        lbldisco3 = new javax.swing.JLabel();
+        lblmemor1 = new javax.swing.JLabel();
+        lblmemor2 = new javax.swing.JLabel();
+        lblmemor3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,18 +72,46 @@ public class BarraProgresso extends javax.swing.JFrame {
             }
         });
 
+        lbldiscomedia.setText("Média :");
+
+        lbldiscominimo.setText("Mínimo :");
+
+        lbldiscomaxima.setText("Maxima :");
+
+        lblmemoriaminimo.setText("Mínimo :");
+
+        lblmemoriamedia.setText("Média :");
+
+        lblmemoriamaxima.setText("Maxima :");
+
+        lblcpumaxima.setText("Maxima :");
+
+        lblcpumedia.setText("Média :");
+
+        lblcpuminimo.setText("Mínimo :");
+
+        lblresultado.setText("Numero");
+
+        lblresultado1.setText("Numero");
+
+        lblresultado2.setText("Numero");
+
+        lbldisco1.setText("Numero");
+
+        lbldisco2.setText("Numero");
+
+        lbldisco3.setText("Numero");
+
+        lblmemor1.setText("Numero");
+
+        lblmemor2.setText("Numero");
+
+        lblmemor3.setText("Numero");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tfCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(tfDisco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(tfMemoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
             .addGroup(layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addComponent(jLabel1)
@@ -73,9 +121,52 @@ public class BarraProgresso extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(92, 92, 92))
             .addGroup(layout.createSequentialGroup()
-                .addGap(216, 216, 216)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblcpumaxima, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                            .addComponent(lblcpumedia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblcpuminimo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblresultado)
+                            .addComponent(lblresultado1)
+                            .addComponent(lblresultado2))))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfDisco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lbldiscomedia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lbldiscominimo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lbldiscomaxima, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbldisco1)
+                                    .addComponent(lbldisco2)
+                                    .addComponent(lbldisco3))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfMemoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblmemoriaminimo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblmemoriamedia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblmemoriamaxima, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblmemor1)
+                            .addComponent(lblmemor2)
+                            .addComponent(lblmemor3))))
+                .addGap(45, 45, 45))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,9 +181,46 @@ public class BarraProgresso extends javax.swing.JFrame {
                     .addComponent(tfMemoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfDisco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblmemoriamaxima)
+                            .addComponent(lblmemor1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblmemoriamedia, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblmemor2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblmemoriaminimo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblmemor3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbldiscomaxima)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbldiscomedia, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbldisco2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbldiscominimo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbldisco3)
+                            .addComponent(lblresultado2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblcpumaxima)
+                                .addComponent(lblresultado))
+                            .addComponent(lbldisco1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblcpumedia, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblresultado1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblcpuminimo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(342, 342, 342)
                 .addComponent(jButton1)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -105,12 +233,75 @@ public class BarraProgresso extends javax.swing.JFrame {
         tfCpu.setString(cpu.toString());
         tfCpu.setString(cpu + "%");
         
+        // maximo cpu
+        Random aleatorio = new Random();
+        Integer sorteado = aleatorio.nextInt(101);
+        
+        if (sorteado > maximo ) {
+            maximo= sorteado;
+            lblresultado.setText(maximo.toString());
+        }else{
+            maximo=sorteado;
+        }
+        // media cpu
+        Random aleatorio2 = new Random();
+        Integer sorteado2 = aleatorio2.nextInt(101);
+        
+        if (sorteado2 > media) {
+            media=sorteado2;
+            lblresultado1.setText(media.toString());
+        }else{
+            media=sorteado2;
+        }
+        // minimo cpu
+        Random aleatorio3 = new Random();
+        Integer sorteado3 = aleatorio3.nextInt(101);
+        
+        if (sorteado3 > minimo ) {
+            minimo=sorteado3;
+            lblresultado2.setText(minimo.toString());
+        }else{
+            minimo=sorteado3;
+        }
+       
+
         // Disco
         Integer disco = ThreadLocalRandom.current().nextInt(0, 100);
         tfDisco.setValue(disco);
         tfDisco.setStringPainted(true);
         tfDisco.setString(disco.toString());
         tfDisco.setString(disco + "%");
+
+        // maximo disco
+        Random aleatorio4 = new Random();
+        Integer sorteado4 = aleatorio4.nextInt(101);
+        
+        if (sorteado4 > maximo ) {
+            maximo= sorteado4;
+            lbldisco1.setText(maximo.toString());
+        }else{
+            maximo=sorteado4;
+        }
+        // media disco
+        Random aleatorio5 = new Random();
+        Integer sorteado5 = aleatorio5.nextInt(101);
+        
+        if (sorteado5 > media) {
+            media=sorteado5;
+            lbldisco2.setText(media.toString());
+        }else{
+            media=sorteado5;
+        }
+        // minimo disco
+        Random aleatorio6 = new Random();
+        Integer sorteado6 = aleatorio6.nextInt(101);
+        
+        if (sorteado6 > minimo ) {
+            minimo=sorteado6;
+            lbldisco3.setText(minimo.toString());
+        }else{
+            minimo=sorteado6;
+        }
         
         //Memoria
         Integer memoria = ThreadLocalRandom.current().nextInt(0, 100);
@@ -118,6 +309,38 @@ public class BarraProgresso extends javax.swing.JFrame {
         tfMemoria.setStringPainted(true);
         tfMemoria.setString(memoria.toString());
         tfMemoria.setString(memoria + "%");
+        
+        // maximo memoria
+        Random aleatorio7 = new Random();
+        Integer sorteado7 = aleatorio7.nextInt(101);
+        
+        if (sorteado7 > maximo ) {
+            maximo= sorteado7;
+            lblmemor1.setText(maximo.toString());
+        }else{
+            maximo=sorteado7;
+        }
+        // media memoria
+         Random aleatorio8 = new Random();
+        Integer sorteado8 = aleatorio8.nextInt(101);
+        
+        if (sorteado8 > maximo ) {
+            maximo= sorteado8;
+            lblmemor2.setText(maximo.toString());
+        }else{
+            maximo=sorteado8;
+        }
+        // minimo memoria
+         Random aleatorio9 = new Random();
+        Integer sorteado9 = aleatorio9.nextInt(101);
+        
+        if (sorteado9 > maximo ) {
+            maximo= sorteado9;
+            lblmemor3.setText(maximo.toString());
+        }else{
+            maximo=sorteado9;
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -160,6 +383,24 @@ public class BarraProgresso extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblcpumaxima;
+    private javax.swing.JLabel lblcpumedia;
+    private javax.swing.JLabel lblcpuminimo;
+    private javax.swing.JLabel lbldisco1;
+    private javax.swing.JLabel lbldisco2;
+    private javax.swing.JLabel lbldisco3;
+    private javax.swing.JLabel lbldiscomaxima;
+    private javax.swing.JLabel lbldiscomedia;
+    private javax.swing.JLabel lbldiscominimo;
+    private javax.swing.JLabel lblmemor1;
+    private javax.swing.JLabel lblmemor2;
+    private javax.swing.JLabel lblmemor3;
+    private javax.swing.JLabel lblmemoriamaxima;
+    private javax.swing.JLabel lblmemoriamedia;
+    private javax.swing.JLabel lblmemoriaminimo;
+    private javax.swing.JLabel lblresultado;
+    private javax.swing.JLabel lblresultado1;
+    private javax.swing.JLabel lblresultado2;
     private javax.swing.JProgressBar tfCpu;
     private javax.swing.JProgressBar tfDisco;
     private javax.swing.JProgressBar tfMemoria;
