@@ -16,7 +16,7 @@ public class BarraProgresso extends javax.swing.JFrame {
 
     Integer maximo = 0;
     Integer minimo = 0;
-    Integer media = maximo + minimo / 2;
+    Integer media = (maximo + minimo) / 2;
 
     public BarraProgresso() {
         initComponents();
@@ -227,7 +227,7 @@ public class BarraProgresso extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Integer cpu = ThreadLocalRandom.current().nextInt(0, 100);
+        Integer cpu = ThreadLocalRandom.current().nextInt(0,100);
         tfCpu.setValue(cpu);
         tfCpu.setStringPainted(true);
         tfCpu.setString(cpu.toString());
